@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/colorful-geometric-shapes-including-pyramids-and-spheres-with-a-modern-gradient-effect-on-a-transparent-background-perfect-for-abstract-design-png-Photoroom.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Asegura que esté detrás de todo */
+ 
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    z-index: -1;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    overflow: hidden;
+    padding: 0 50px;
+
+}
+
+.navegacion {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 3; /* Asegura que el nav esté encima */
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navegacion ul li {
+    margin: 0 15px;
+}
+
+.navegacion ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navegacion ul li a:hover {
+    color: #f4a261;
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+}
+
+.contacto a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contacto a:hover {
+    background-color: #f4a261;
+    color: #ffffff;
+}
+
+.contenido-hero {
+    z-index: 2; /* Asegura que el contenido esté encima del fondo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: 50px;
+}
+
+.texto-hero {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 40px 0;
+    color: #d3d3d3;
+    text-align: left;
+}
+
+.botones-hero {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* Estilo para la tarjeta de perfil */
+.mi-foto {
+    margin-right: 10px;
+    position: relative;
+    width: 500px; /* Tamaño fijo para contener la tarjeta y los íconos */
+    height: 600px;
+}
+
+.profile-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 2; /* Asegura que esté encima del fondo */
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 15px 15px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 3; /* Asegura que esté encima de todo */
+}
+
+.profile-card:hover .profile-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #6b48ff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #a9e34b;
+}
+
+/* Íconos flotantes alrededor del perfil con 10 íconos */
+.floating-icons {
+    position: absolute;
+    top: -30px; /* Espacio fuera del contorno */
+    left: -30px;
+    width: calc(100% + 60px); /* Área para el contorno */
+    height: calc(100% + 60px);
+    pointer-events: none; /* Permitir interactividad en los hijos */
+    z-index: 2; /* Debajo del contenido pero encima del fondo */
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.mi-foto:hover .floating-icons {
+    opacity: 1;
+}
+
+.floating-icons img {
+    position: absolute;
+    width: 85px; /* Tamaño de los íconos */
+    height: auto;
+    transform-origin: center;
+    pointer-events: auto; /* Permitir interactividad en los íconos */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Posiciones alrededor del contorno, con un toque desordenado */
+.floating-icons img:nth-child(1) {
+    top: -10%;
+    left: 0%;
+    animation: bounce 2s infinite ease-in-out;
+}
+.floating-icons img:nth-child(2) {
+    top: -5%;
+    right: 5%;
+    animation: sway 3s infinite ease-in-out;
+}
+.floating-icons img:nth-child(3) {
+    bottom: -5%;
+    left: 5%;
+    animation: pulse 2.5s infinite ease-in-out;
+}
+.floating-icons img:nth-child(4) {
+    bottom: -10%;
+    right: 0%;
+    animation: rotate-slow 10s infinite linear;
+}
+.floating-icons img:nth-child(5) {
+    top: 20%;
+    left: -5%;
+    animation: float-up-down 3s infinite ease-in-out;
+}
+.floating-icons img:nth-child(6) {
+    top: 25%;
+    right: -5%;
+    animation: wobble 4s infinite ease-in-out;
+}
+.floating-icons img:nth-child(7) {
+    bottom: 20%;
+    left: -5%;
+    animation: scale-up-down 2s infinite ease-in-out;
+}
+.floating-icons img:nth-child(8) {
+    bottom: 25%;
+    right: -5%;
+    animation: swing 3.5s infinite ease-in-out;
+}
+.floating-icons img:nth-child(9) { /* Arriba, centrado */
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fade-in-out 2s infinite ease-in-out;
+}
+.floating-icons img:nth-child(10) { /* Abajo, centrado */
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: spin 5s infinite linear;
+}
+
+/* Interactividad al hacer hover en los íconos */
+.floating-icons img:hover {
+    transform: scale(1.3); /* Agrandar al hacer hover */
+    opacity: 0.8; /* Reducir opacidad ligeramente */
+}
+
+/* Animaciones únicas para cada ícono */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes sway {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes rotate-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes float-up-down {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes scale-up-down {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes fade-in-out {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes spin {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+}
+
+/* Eliminar animaciones no utilizadas */
+@keyframes orbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes popIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Nuevo botón neón */
+.btn-neon {
+    background-color: #43d78f;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #43d78f, 0 0 20px #43d78f, 0 0 30px #43d78f;
+    transition: all 0.3s ease;
+}
+
+.btn-neon:hover {
+    box-shadow: 0 0 15px #43d78f, 0 0 30px #43d78f, 0 0 50px #43d78f;
+    transform: scale(1.05);
+}
+
+.btn-neon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+}
+
+.btn-neon:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Botón explorar */
+.btn-explorar {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #46e28a;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.btn-explorar:hover {
+    color: #7cde8b;
+    border-color: #7cde8b;
+}
