@@ -12,6 +12,7 @@ body {
     overflow-x: hidden;
 }
 
+<<<<<<< HEAD
 body.menu-open {
     overflow: hidden;
 }
@@ -38,11 +39,15 @@ body.menu-open {
 }
 
 .overlay {
+=======
+.background-image {
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
     opacity: 0;
@@ -53,6 +58,22 @@ body.menu-open {
 .overlay.active {
     opacity: 1;
     pointer-events: auto;
+=======
+    background: url('img/colorful-geometric-shapes-including-pyramids-and-spheres-with-a-modern-gradient-effect-on-a-transparent-background-perfect-for-abstract-design-png-Photoroom.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Asegura que esté detrás de todo */
+ 
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    z-index: -1;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
 }
 
 .hero {
@@ -63,6 +84,7 @@ body.menu-open {
     align-items: center;
     color: #ffffff;
     overflow: hidden;
+<<<<<<< HEAD
     padding: 0 20px;
     margin-top: 80px;
     position: relative; /* Para que el fondo se contenga dentro del header */
@@ -71,11 +93,21 @@ body.menu-open {
 nav.nav {
     position: fixed;
     top: 0;
+=======
+    padding: 0 50px;
+
+}
+
+.navegacion {
+    position: absolute;
+    top: 20px;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     padding: 15px 30px;
     z-index: 1000;
     border: none;
@@ -131,21 +163,53 @@ nav.nav ul li {
 
 nav.nav ul li a {
     color: #000000;
+=======
+    padding: 0 20px;
+    z-index: 3; /* Asegura que el nav esté encima */
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navegacion ul li {
+    margin: 0 15px;
+}
+
+.navegacion ul li a {
+    color: #ffffff;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
+<<<<<<< HEAD
 nav.nav ul li a:hover {
     color: #00ff37;
     
 }
 
 nav.nav .contacto {
+=======
+.navegacion ul li a:hover {
+    color: #f4a261;
+}
+
+.contacto {
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     display: flex;
     align-items: center;
 }
 
+<<<<<<< HEAD
 nav.nav .contacto a {
     background-color: #3f896a;
     color: #ffffff;
@@ -243,16 +307,40 @@ nav.nav .contacto a:hover {
 /* Estilos del contenido principal */
 .contenido-hero {
     z-index: 2;
+=======
+.contacto a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contacto a:hover {
+    background-color: #f4a261;
+    color: #ffffff;
+}
+
+.contenido-hero {
+    z-index: 2; /* Asegura que el contenido esté encima del fondo */
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 1400px;
+<<<<<<< HEAD
     margin-left: 20px;
+=======
+    margin-left: 50px;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
 }
 
 .texto-hero {
     max-width: 600px;
+<<<<<<< HEAD
     margin: 0 auto;
     position: relative;
 }
@@ -307,10 +395,17 @@ nav.nav .contacto a:hover {
 .hero h1 {
     animation-delay: 0.5s;
     font-size: 4rem;
+=======
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 20px;
     color: #ffffff;
+<<<<<<< HEAD
     text-align: center;
 }
 
@@ -321,6 +416,30 @@ nav.nav .contacto a:hover {
     margin: 0 0 40px 0;
     color: #ffffff;
     text-align: center;
+=======
+    text-align: left;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 40px 0;
+    color: #d3d3d3;
+    text-align: left;
+}
+
+.botones-hero {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* Estilo para la tarjeta de perfil */
+.mi-foto {
+    margin-right: 10px;
+    position: relative;
+    width: 500px; /* Tamaño fijo para contener la tarjeta y los íconos */
+    height: 600px;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
 }
 
 .profile-card {
@@ -331,6 +450,7 @@ nav.nav .contacto a:hover {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+<<<<<<< HEAD
     animation-delay: 0.5s;
     transform: scale(1.05);
     z-index: 2;
@@ -345,6 +465,20 @@ nav.nav .contacto a:hover {
     pointer-events: none;
     animation-delay: 0.5s;
     z-index: 2;
+=======
+    transition: all 0.4s ease;
+    z-index: 2; /* Asegura que esté encima del fondo */
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
 }
 
 .profile-info {
@@ -356,6 +490,7 @@ nav.nav .contacto a:hover {
     text-align: center;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 0 0 15px 15px;
+<<<<<<< HEAD
     animation-delay: 0.9s;
     transform: translateY(0);
     z-index: 3;
@@ -453,6 +588,17 @@ nav.nav .contacto a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+=======
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 3; /* Asegura que esté encima de todo */
+}
+
+.profile-card:hover .profile-info {
+    opacity: 1;
+    transform: translateY(0);
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
 }
 
 .profile-info h3 {
@@ -476,17 +622,43 @@ nav.nav .contacto a:hover {
 }
 
 .social-links a {
+<<<<<<< HEAD
     color: #555555;
+=======
+    color: #6b48ff;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
+<<<<<<< HEAD
     color: #4be3cf;
+=======
+    color: #a9e34b;
+}
+
+/* Íconos flotantes alrededor del perfil con 10 íconos */
+.floating-icons {
+    position: absolute;
+    top: -30px; /* Espacio fuera del contorno */
+    left: -30px;
+    width: calc(100% + 60px); /* Área para el contorno */
+    height: calc(100% + 60px);
+    pointer-events: none; /* Permitir interactividad en los hijos */
+    z-index: 2; /* Debajo del contenido pero encima del fondo */
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.mi-foto:hover .floating-icons {
+    opacity: 1;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
 }
 
 .floating-icons img {
     position: absolute;
+<<<<<<< HEAD
     width: 85px;
     height: auto;
     transform-origin: center;
@@ -496,11 +668,27 @@ nav.nav .contacto a:hover {
 
 .floating-icons img:nth-child(1) {
     top: -5%;
+=======
+    width: 85px; /* Tamaño de los íconos */
+    height: auto;
+    transform-origin: center;
+    pointer-events: auto; /* Permitir interactividad en los íconos */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Posiciones alrededor del contorno, con un toque desordenado */
+.floating-icons img:nth-child(1) {
+    top: -10%;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     left: 0%;
     animation: bounce 2s infinite ease-in-out;
 }
 .floating-icons img:nth-child(2) {
+<<<<<<< HEAD
     top: 4%;
+=======
+    top: -5%;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     right: 5%;
     animation: sway 3s infinite ease-in-out;
 }
@@ -509,8 +697,13 @@ nav.nav .contacto a:hover {
     left: 5%;
     animation: pulse 2.5s infinite ease-in-out;
 }
+<<<<<<< HEAD
 .floating-icons img:nth-child(4) { /* 1339268.png (Camera) */
     bottom: -5%; /* Ajustado para evitar recorte */
+=======
+.floating-icons img:nth-child(4) {
+    bottom: -10%;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     right: 0%;
     animation: rotate-slow 10s infinite linear;
 }
@@ -534,6 +727,7 @@ nav.nav .contacto a:hover {
     right: -5%;
     animation: swing 3.5s infinite ease-in-out;
 }
+<<<<<<< HEAD
 .floating-icons img:nth-child(9) { /* github-icon-2.svg (Headphones) */
     top: 10%; /* Ajustado para evitar recorte */
     left: 50%;
@@ -543,16 +737,36 @@ nav.nav .contacto a:hover {
 }
 .floating-icons img:nth-child(10) { /* figma_logo_icon_147289.webp (Book) */
     bottom: -13%; /* Ajustado para evitar recorte */
+=======
+.floating-icons img:nth-child(9) { /* Arriba, centrado */
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fade-in-out 2s infinite ease-in-out;
+}
+.floating-icons img:nth-child(10) { /* Abajo, centrado */
+    bottom: -15%;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
     left: 50%;
     transform: translateX(-50%);
     animation: spin 5s infinite linear;
 }
 
+<<<<<<< HEAD
 .floating-icons img:hover {
     transform: scale(1.3);
     opacity: 0.8;
 }
 
+=======
+/* Interactividad al hacer hover en los íconos */
+.floating-icons img:hover {
+    transform: scale(1.3); /* Agrandar al hacer hover */
+    opacity: 0.8; /* Reducir opacidad ligeramente */
+}
+
+/* Animaciones únicas para cada ícono */
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
 @keyframes bounce {
     0% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
@@ -616,6 +830,7 @@ nav.nav .contacto a:hover {
     100% { transform: translateX(-50%) rotate(360deg); }
 }
 
+<<<<<<< HEAD
 /* Media Queries para dispositivos responsivos */
 @media (max-width: 1024px) {
     nav.nav {
@@ -1167,4 +1382,71 @@ nav.nav .contacto a:hover {
     .foto-avatar .avatar-img {
         max-width: 120px;
     }
+=======
+/* Eliminar animaciones no utilizadas */
+@keyframes orbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes popIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Nuevo botón neón */
+.btn-neon {
+    background-color: #43d78f;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #43d78f, 0 0 20px #43d78f, 0 0 30px #43d78f;
+    transition: all 0.3s ease;
+}
+
+.btn-neon:hover {
+    box-shadow: 0 0 15px #43d78f, 0 0 30px #43d78f, 0 0 50px #43d78f;
+    transform: scale(1.05);
+}
+
+.btn-neon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+}
+
+.btn-neon:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Botón explorar */
+.btn-explorar {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #46e28a;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.btn-explorar:hover {
+    color: #7cde8b;
+    border-color: #7cde8b;
+>>>>>>> 235342e891a49d23223b296276a5510c68e4a3e8
 }
